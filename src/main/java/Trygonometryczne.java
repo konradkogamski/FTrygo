@@ -20,16 +20,28 @@ public class Trygonometryczne {
         System.out.println("Jaka funkcje chcesz obliczyc? (sin = 1, cos = 2, tg = 3 ctg = 4): ");
         int funkcja = s.nextInt();
 
-        if (funkcja == 1 && a == 0 && b == 0 && c == 0) {
-            System.out.println(a / c);
-        } else if (funkcja == 2 && a == 0 && b == 0 && c == 0) {
-            System.out.println(b / c);
-        } else if (funkcja == 3 && a == 0 && b == 0 && c == 0) {
-            System.out.println(a / b);
-        } else if (funkcja == 4 && a == 0 && b == 0 && c == 0) {
-            System.out.println(b / a);
-        } else {
+        if (a <= 0 || b <= 0 || c <= 0 ) {
             System.out.println("Error");
+            return;
+        }
+        switch (funkcja) {
+            case 1:
+                System.out.println(a / c);
+                break;
+
+            case 2:
+                System.out.println(b / c);
+                break;
+
+            case 3:
+                System.out.println(a / b);
+                break;
+
+            case 4:
+                System.out.println(b / a);
+                break;
+            default:
+                System.out.println("Wybierz numer od 1 do 4");
         }
     }
 }
